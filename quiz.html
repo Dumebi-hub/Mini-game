@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/quiz.css">  
+</head>
+<body>
+    <div id="timer" style="display: none;">1:30</div>
+        <a href="index.html" class="home-button" style="background: var(--primary);">← Home</a>
+        <div class="quiz-container">
+        <div id="start-screen" class="start-screen">
+            <h2>Welcome to the Quiz!</h2>
+            <p>You have 1 minute and 30 seconds to answer 10 questions.</p>
+            <button onclick="startGame()">Start Quiz</button>
+        </div>
+        <div id="quiz-screen" style="display: none;">
+            <div class="progress" id="progress"></div>
+            <div class="question" id="question"></div>
+            <div class="options" id="options"></div>
+        </div>
+        <div id="end-screen" class="end-screen" style="display: none;">
+            <h2>Review!</h2>
+            <p>Your score: <span id="final-score">0</span> out of 10</p>
+            <div class="button-container">
+                <button onclick="showReview()">Review Answers</button>
+                <button onclick="startGame()">Play Again</button>
+            </div>
+        </div>
+        <div id="review-screen" class="review-screen" style="display: none;">
+            <h2>Answer Review</h2>
+            <div id="review-content"></div>
+            <div class="button-container">
+                <button onclick="startGame()">Play Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/quiz.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Match</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/puzzle.css">
+</head>
+<body>
+    <a href="index.html" class="home-link">Home</a>
+
+<div class="difficulty-select" id="difficultySelect">
+    <h2>Select Difficulty</h2>
+    <button onclick="startGame('easy')">Easy</button>
+    <button onclick="startGame('hard')">Hard</button>
+</div>
+    <div class="game-container" id="gameContainer" style="display: none;">
+        <div class="game-header">
+            <div class="game-stats">
+                <div class="stat">Time: <span id="timer">3:00</span></div>
+                <div class="stat">Moves: <span id="moves">0</span></div>
+                <div class="stat">Matches: <span id="matches">0</span></div>
+            </div>
+            <button onclick="resetGame()">New Game</button>
+        </div>
+        <div class="game-board" id="gameBoard"></div>
+    </div>
+<div class="game-over" id="gameOver">
+    <h2>Game Over!</h2>
+    <p id="gameOverMessage"></p>
+    <button onclick="showDifficultySelect()">Play Again</button>
+</div>
+
+<script src="js/script.js"></script>
+<script src="js/puzzle.js"></script>
+</body>
+</html>

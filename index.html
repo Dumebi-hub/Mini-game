@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Games</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <!--<li><a href="#home"><img src="" alt="Home" class="icon"></a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="colors.html">Colors</a></li>
+                <li><a href="puzzle.html">Memory Match</a></li>-->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h1>Mini Games Web App</h1>
+            <p>Many fun and exiting games to play to relief your stress.</p>
+            <p>Select a game to begin.</p>
+        </section>
+
+        <section id="games">
+            <article>
+                <a href="quiz.html">
+                    <img src="images/quiz.png" alt="Quiz Game" class="game-image">
+                    <h2>Quiz Game</h2>
+                </a>
+            </article>
+
+            <article>
+                <a href="colors.html">
+                    <img src="images/colors.png" alt="Colors Game" class="game-image">
+                    <h2>Colors Game</h2>
+                </a>
+            </article>
+
+            <article>
+                <a href="puzzle.html">
+                    <img src="images/puzzle.png" alt="Memory Match Game" class="game-image">
+                    <h2>Memory Match Game</h2>
+                </a>
+            </article>
+        </section>
+    </main>
+
+
+
+    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute('href');
+            const targetElement = document.getElementById(targetId);
+            
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+});
+    </script>
+</body>
+</html>
